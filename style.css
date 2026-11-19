@@ -166,7 +166,7 @@ footer{padding:34px 0;text-align:center;font-size:13px;color:#9ca3af}
 /* Contact avec formulaire */
 .contact-box{background:var(--navy);text-align:left;padding:52px}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
-.contact-avatar{width:52px;height:52px;border-radius:50%;background:var(--warm);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;margin-bottom:18px}
+.contact-avatar{width:52px;height:52px;border-radius:50%;background:var(--warm);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;letter-spacing:-.5px;margin-bottom:18px}
 .contact-intro .contact-links{justify-content:flex-start}
 .contact-form{display:flex;flex-direction:column;gap:14px;background:#fff;border-radius:16px;padding:26px;color:var(--ink)}
 .contact-form label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:var(--muted)}
