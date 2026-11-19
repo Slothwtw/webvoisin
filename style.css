@@ -206,3 +206,7 @@ footer{padding:34px 0;text-align:center;font-size:13px;color:#9ca3af}
 @media (prefers-reduced-motion: reduce){
   *{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important;scroll-behavior:auto !important}
 }
+
+/* bouton contour lisible sur le hero foncé */
+.hero .btn-outline{color:#fff;border-color:rgba(255,255,255,.45)}
+.hero .btn-outline:hover{background:#fff;color:var(--navy);border-color:#fff}
