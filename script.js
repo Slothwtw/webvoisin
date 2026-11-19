@@ -26,8 +26,8 @@
   }
 
   // Courriel assemblé en JS : évite qu'un robot le récolte dans le HTML brut
-  var user = "contact";
-  var domain = "webvoisin.ca";
+  var user = "webvoisin8";
+  var domain = "gmail.com";
   document.querySelectorAll(".js-email").forEach(function (a) {
     var address = user + "@" + domain;
     a.href = "mailto:" + address;
