@@ -27,7 +27,7 @@
 <section class="hero" id="essai">
   <div class="wrap hero-grid">
     <div class="hero-text">
-      <div class="eyebrow">Pour les commerçants &amp; artisans de la Montérégie</div>
+      <div class="eyebrow">Pour les commerçants &amp; artisans</div>
       <h1>Voyez votre site <span class="grad">avant même de nous appeler.</span></h1>
       <p>Tapez le nom de votre commerce : l'aperçu se construit sous vos yeux. Site + logo, prix fixe, livré en une semaine.</p>
       <div class="cta">
@@ -178,43 +178,32 @@
   </div>
 </section>
 
-<section id="region" class="wrap reveal">
+<section id="chemins" class="wrap reveal">
   <div class="region">
     <div class="region-text">
-      <div class="eyebrow eyebrow-light eyebrow-left">⚜️ Fait en Montérégie</div>
-      <h2>On est du coin.</h2>
-      <p>Pas une grosse agence de Montréal qui vous traite comme un numéro de dossier. On connaît la région, on peut se voir en personne, pis on répond au téléphone.</p>
+      <div class="eyebrow eyebrow-light eyebrow-left">Comment vos clients vous trouvent</div>
+      <h2>Tous les chemins mènent à vous.</h2>
+      <p>Google, Maps, Facebook, un texto d'un ami, votre carte d'affaires… Peu importe d'où ils viennent, vos clients aboutissent sur votre site. Et de là, ils vous appellent.</p>
       <ul class="region-towns">
-        <li>Saint-Hyacinthe</li><li>Granby</li><li>Saint-Jean-sur-Richelieu</li><li>Chambly</li>
-        <li>Beloeil</li><li>Saint-Bruno</li><li>Longueuil</li><li>Brossard</li>
-        <li>Châteauguay</li><li>Vaudreuil</li><li>Sorel-Tracy</li><li>Valleyfield</li>
+        <li class="c1">Bouton « Appeler » en un clic</li><li class="c2">Adresse et itinéraire</li><li class="c3">Liens vers vos réseaux</li>
+        <li class="c4">Formulaire de contact</li><li class="c5">Vos avis clients</li><li class="c6">Beau sur cellulaire</li>
       </ul>
     </div>
-    <div class="region-map" aria-hidden="true">
-      <svg viewBox="0 0 600 380" role="img">
+    <div class="region-map">
+      <svg viewBox="0 0 600 380" role="img" aria-label="Toutes les sources de clients mènent à votre site, puis à un nouveau client">
         <defs>
-          <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#d9dbea"/></pattern>
+          <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#e3d9f7"/></pattern>
+          <linearGradient id="hubGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
+          <linearGradient id="outGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a855f7"/><stop offset="1" stop-color="#22c55e"/></linearGradient>
         </defs>
         <rect x="0" y="0" width="600" height="380" rx="22" fill="url(#dots)"/>
-        <!-- Fleuve Saint-Laurent -->
-        <path d="M-10,215 C 90,175 160,135 225,105 S 360,48 610,6" fill="none" stroke="#bfdbfe" stroke-width="16" stroke-linecap="round"/>
-        <!-- Rivière Richelieu -->
-        <path d="M382,36 C 362,82 342,108 336,128 S 306,180 302,205 S 296,250 293,300 L 292,390" fill="none" stroke="#bfdbfe" stroke-width="7" stroke-linecap="round"/>
-        <!-- Rivière Yamaska -->
-        <path d="M418,22 C 425,70 440,100 446,128 S 462,200 478,262" fill="none" stroke="#dbeafe" stroke-width="5" stroke-linecap="round"/>
-        <g class="towns" font-family="Inter, sans-serif" font-size="12.5" font-weight="600" fill="#1c1f3d">
-          <g class="pin hq" transform="translate(446,128)"><circle r="16" class="pulse"/><circle r="7"/><text x="13" y="-12">Saint-Hyacinthe</text></g>
-          <g class="pin" transform="translate(478,265)"><circle r="5"/><text x="10" y="4">Granby</text></g>
-          <g class="pin" transform="translate(293,268)"><circle r="5"/><text x="10" y="4">Saint-Jean</text></g>
-          <g class="pin" transform="translate(302,205)"><circle r="5"/><text x="10" y="4">Chambly</text></g>
-          <g class="pin" transform="translate(336,128)"><circle r="5"/><text x="-56" y="-10">Beloeil</text></g>
-          <g class="pin" transform="translate(284,152)"><circle r="5"/><text x="-80" y="18">Saint-Bruno</text></g>
-          <g class="pin" transform="translate(228,122)"><circle r="5"/><text x="-74" y="-8">Longueuil</text></g>
-          <g class="pin" transform="translate(214,172)"><circle r="5"/><text x="-70" y="16">Brossard</text></g>
-          <g class="pin" transform="translate(150,216)"><circle r="5"/><text x="-84" y="18">Châteauguay</text></g>
-          <g class="pin" transform="translate(66,160)"><circle r="5"/><text x="-10" y="-12">Vaudreuil</text></g>
-          <g class="pin" transform="translate(42,258)"><circle r="5"/><text x="10" y="4">Valleyfield</text></g>
-          <g class="pin" transform="translate(382,38)"><circle r="5"/><text x="10" y="4">Sorel-Tracy</text></g>
+        <path d="M70,46 C 200,46 270,190 400,190" class="flow-base" stroke="#6366f1"/><path d="M70,46 C 200,46 270,190 400,190" class="flow-dash" stroke="#6366f1" style="animation-delay:-0.00s"/><path d="M232,30 C 362,30 270,190 400,190" class="flow-base" stroke="#eab308"/><path d="M232,30 C 362,30 270,190 400,190" class="flow-dash" stroke="#eab308" style="animation-delay:-0.37s"/><path d="M40,128 C 170,128 270,190 400,190" class="flow-base" stroke="#22c55e"/><path d="M40,128 C 170,128 270,190 400,190" class="flow-dash" stroke="#22c55e" style="animation-delay:-0.74s"/><path d="M58,214 C 188,214 270,190 400,190" class="flow-base" stroke="#3b82f6"/><path d="M58,214 C 188,214 270,190 400,190" class="flow-dash" stroke="#3b82f6" style="animation-delay:-1.11s"/><path d="M44,298 C 174,298 270,190 400,190" class="flow-base" stroke="#ec4899"/><path d="M44,298 C 174,298 270,190 400,190" class="flow-dash" stroke="#ec4899" style="animation-delay:-1.48s"/><path d="M178,352 C 308,352 270,190 400,190" class="flow-base" stroke="#06b6d4"/><path d="M178,352 C 308,352 270,190 400,190" class="flow-dash" stroke="#06b6d4" style="animation-delay:-1.85s"/><path d="M300,352 C 430,352 270,190 400,190" class="flow-base" stroke="#f97316"/><path d="M300,352 C 430,352 270,190 400,190" class="flow-dash" stroke="#f97316" style="animation-delay:-2.22s"/>
+        <path d="M400,190 C 450,190 490,190 540,190" class="flow-base out" stroke="url(#outGrad)"/>
+        <path d="M400,190 C 450,190 490,190 540,190" class="flow-dash out" stroke="#22c55e"/>
+        <g class="labels" font-family="Inter, sans-serif" font-size="12.5" font-weight="700" fill="#1c1f3d">
+          <g class="src" transform="translate(70,46)"><circle r="9" fill="#6366f1" opacity=".18"/><circle r="5.5" fill="#6366f1"/><text x="-6" y="-14" text-anchor="start">Recherche Google</text></g><g class="src" transform="translate(232,30)"><circle r="9" fill="#eab308" opacity=".18"/><circle r="5.5" fill="#eab308"/><text x="12" y="4" text-anchor="start">Texto d'un ami</text></g><g class="src" transform="translate(40,128)"><circle r="9" fill="#22c55e" opacity=".18"/><circle r="5.5" fill="#22c55e"/><text x="-6" y="-14" text-anchor="start">Google Maps</text></g><g class="src" transform="translate(58,214)"><circle r="9" fill="#3b82f6" opacity=".18"/><circle r="5.5" fill="#3b82f6"/><text x="-6" y="-14" text-anchor="start">Facebook</text></g><g class="src" transform="translate(44,298)"><circle r="9" fill="#ec4899" opacity=".18"/><circle r="5.5" fill="#ec4899"/><text x="-6" y="20" text-anchor="start">Instagram</text></g><g class="src" transform="translate(178,352)"><circle r="9" fill="#06b6d4" opacity=".18"/><circle r="5.5" fill="#06b6d4"/><text x="-6" y="20" text-anchor="start">Carte d'affaires</text></g><g class="src" transform="translate(300,352)"><circle r="9" fill="#f97316" opacity=".18"/><circle r="5.5" fill="#f97316"/><text x="10" y="20" text-anchor="start">Votre vitrine</text></g>
+          <g class="hub" transform="translate(400,190)"><circle r="30" class="pulse"/><circle r="22" fill="url(#hubGrad)"/><circle r="8" fill="#fff"/><text x="0" y="48" text-anchor="middle" font-size="14" font-weight="800">Votre site</text></g>
+          <g class="win" transform="translate(540,190)"><circle r="16" class="pulse pulse-green"/><circle r="9" fill="#22c55e"/><text x="0" y="-22" text-anchor="middle" fill="#15803d" font-weight="800">Nouveau client!</text></g>
         </g>
       </svg>
     </div>
@@ -326,7 +315,7 @@
       <a href="#prix">Prix</a>
       <a href="#faq">Questions</a>
     </nav>
-    <div class="footer-note">© 2026 WebVoisin — Fait avec soin en Montérégie ⚜️</div>
+    <div class="footer-note">© 2026 WebVoisin</div>
   </div>
 </footer>
 
