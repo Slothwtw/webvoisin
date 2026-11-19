@@ -210,3 +210,92 @@ footer{padding:34px 0;text-align:center;font-size:13px;color:#9ca3af}
 /* bouton contour lisible sur le hero foncé */
 .hero .btn-outline{color:#fff;border-color:rgba(255,255,255,.45)}
 .hero .btn-outline:hover{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ================= APERÇU INSTANTANÉ ================= */
+.builder{background:#fff;border-radius:20px;padding:20px;box-shadow:0 30px 60px rgba(0,0,0,.35);color:var(--ink);max-width:440px;margin:0 auto}
+.builder-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.builder-tag{background:var(--warm);color:var(--navy);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:999px}
+.builder-title{font-family:var(--font-display);font-weight:800;font-size:16px}
+.builder-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.builder-fields label{display:flex;flex-direction:column;gap:4px;font-size:11.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+.builder-fields .bf-name{grid-column:1 / -1}
+.builder-fields input,.builder-fields select{font:inherit;font-size:14px;text-transform:none;letter-spacing:0;font-weight:500;color:var(--ink);padding:10px 12px;border:1.5px solid #e2e2ec;border-radius:10px;background:#fafafd;transition:border-color .2s,background .2s}
+.builder-fields input:focus,.builder-fields select:focus{outline:none;border-color:var(--accent);background:#fff}
+.bf-name input{font-size:16px;font-weight:700;padding:12px 14px}
+.bf-colors{grid-column:1 / -1;display:flex;align-items:center;gap:12px;font-size:11.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+.swatches{display:flex;gap:7px;flex-wrap:wrap}
+.swatch{width:24px;height:24px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #d6d6e2;cursor:pointer;padding:0;transition:transform .15s,box-shadow .15s}
+.swatch:hover{transform:scale(1.15)}
+.swatch.on{box-shadow:0 0 0 2px var(--ink);transform:scale(1.1)}
+
+.preview{border:1px solid #e7e7ef;border-radius:12px;overflow:hidden;background:#fff}
+.preview.bump{animation:bump .35s ease}
+@keyframes bump{0%{transform:scale(1)}40%{transform:scale(1.015)}100%{transform:scale(1)}}
+.pv-bar{display:flex;align-items:center;gap:5px;padding:8px 10px;background:#f3f3f8;border-bottom:1px solid #e7e7ef}
+.pv-bar > span{width:8px;height:8px;border-radius:50%;background:#d4d4de}
+.pv-url{margin-left:8px;flex:1;background:#fff;border-radius:6px;padding:3px 10px;font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pv-nav{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;border-bottom:1px solid #f0f0f5}
+.pv-logo{font-weight:800;font-size:13px;font-family:var(--font-display);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:color .3s}
+.pv-call{color:#fff;font-size:10.5px;font-weight:700;padding:5px 9px;border-radius:6px;white-space:nowrap;transition:background .3s}
+.pv-hero{padding:18px 14px;text-align:center;transition:background .3s}
+.pv-h1{font-family:var(--font-display);font-weight:800;font-size:16px;line-height:1.25;margin-bottom:6px}
+.pv-sub{font-size:11.5px;color:var(--muted);margin-bottom:10px}
+.pv-btn{display:inline-block;color:#fff;font-size:11px;font-weight:700;padding:7px 12px;border-radius:7px;transition:background .3s}
+.pv-services{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:10px 12px 12px}
+.pv-service{background:#f6f6fa;border-radius:8px;padding:8px 4px;text-align:center;font-size:10.5px;font-weight:600;display:flex;flex-direction:column;gap:2px}
+.pv-service span:first-child{font-size:16px}
+.builder-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px}
+.builder-actions .btn{padding:12px 20px;font-size:14px}
+.builder-share{background:none;border:none;color:var(--muted);font:inherit;font-size:13px;font-weight:600;cursor:pointer;padding:8px}
+.builder-share:hover{color:var(--accent)}
+
+/* ================= GLISSEUR AVANT / APRÈS ================= */
+.ba{--pos:50%;position:relative;max-width:860px;margin:0 auto;aspect-ratio:16/9;border-radius:20px;overflow:hidden;box-shadow:0 24px 50px rgba(17,24,39,.14);border:1px solid #e7e7ef;user-select:none}
+.ba-layer{position:absolute;inset:0;padding:44px 36px 28px}
+.ba-before{background:#f4f4f6;filter:saturate(.6)}
+.ba-after{background:#fff;clip-path:inset(0 0 0 var(--pos))}
+.ba-label{position:absolute;top:14px;left:16px;background:rgba(17,24,39,.75);color:#fff;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.ba-label-after{left:auto;right:16px;background:var(--accent)}
+.ba-google{max-width:62%;display:flex;flex-direction:column;gap:12px}
+.ba-search{background:#fff;border:1px solid #dcdce3;border-radius:999px;padding:10px 18px;font-size:14px;font-weight:600}
+.ba-res{padding:4px 2px}
+.ba-res-t{color:#5a5ad6;font-size:15px;font-weight:600}
+.ba-res-d{color:#8a8a96;font-size:12.5px}
+.ba-comp .ba-res-t{color:#1a1aa6;font-weight:800}
+.ba-sad{margin-top:4px;align-self:flex-start;background:#fee2e2;color:#b91c1c;font-weight:700;font-size:13px;padding:8px 14px;border-radius:999px}
+.ba-site{margin-left:auto;max-width:62%;display:flex;flex-direction:column;gap:14px;text-align:center}
+.ba-nav{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-bottom:10px;border-bottom:1px solid #f0f0f5}
+.ba-logo{font-family:var(--font-display);font-weight:800;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ba-call{color:#fff;font-size:12px;font-weight:700;padding:6px 11px;border-radius:7px;white-space:nowrap}
+.ba-hero{background:var(--soft);border-radius:12px;padding:22px 16px}
+.ba-h1{font-family:var(--font-display);font-weight:800;font-size:20px;line-height:1.25;margin-bottom:12px}
+.ba-btn{display:inline-block;color:#fff;font-size:12.5px;font-weight:700;padding:9px 16px;border-radius:8px}
+.ba-stars{font-size:13px;color:var(--muted)}
+.ba-happy{align-self:center;background:#dcfce7;color:#15803d;font-weight:700;font-size:13px;padding:8px 14px;border-radius:999px}
+.ba-handle{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 0 1px rgba(17,24,39,.1);pointer-events:none}
+.ba-handle span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:#fff;box-shadow:0 6px 18px rgba(17,24,39,.25);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:var(--navy)}
+.ba input[type=range]{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+
+/* ================= ON EST DU COIN ================= */
+.region{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center;background:#fffbf2;border:1px solid #f3e6c8;border-radius:24px;padding:44px}
+.eyebrow-left{text-align:left;color:#b45309}
+.region-text h2{font-family:var(--font-display);font-size:38px;font-weight:800;margin:0 0 12px;letter-spacing:-.5px}
+.region-text p{color:var(--muted);font-size:16px;margin:0 0 22px}
+.region-towns{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:7px}
+.region-towns li{background:#fff;border:1px solid #f0e2c0;border-radius:999px;padding:5px 12px;font-size:12.5px;font-weight:600;color:#7c5a12}
+.region-map svg{width:100%;height:auto;display:block}
+.pin circle{fill:var(--accent)}
+.pin.hq circle{fill:var(--warm)}
+.pin .pulse{fill:var(--warm);opacity:.35;transform-origin:center;animation:pinPulse 2.2s ease-out infinite}
+@keyframes pinPulse{0%{transform:scale(.5);opacity:.55}100%{transform:scale(1.6);opacity:0}}
+.region-map text{paint-order:stroke;stroke:#fffbf2;stroke-width:4px}
+
+@media (max-width:860px){
+  .builder-fields{grid-template-columns:1fr}
+  .bf-colors{flex-direction:column;align-items:flex-start}
+  .ba{aspect-ratio:3/4}
+  .ba-layer{padding:44px 16px 20px}
+  .ba-google,.ba-site{max-width:100%}
+  .region{grid-template-columns:1fr;padding:28px 20px}
+  .region-text h2{font-size:30px}
+}

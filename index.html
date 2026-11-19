@@ -24,12 +24,12 @@
   <a href="#contact" class="btn btn-primary">Obtenir une soumission</a>
 </header>
 
-<section class="hero">
+<section class="hero" id="essai">
   <div class="wrap hero-grid">
     <div class="hero-text">
       <div class="eyebrow">Pour les commerçants &amp; artisans de la Montérégie</div>
-      <h1>Sans site web, vos <span class="grad">clients appellent le compétiteur.</span></h1>
-      <p>Site web + logo, prix fixe, livré en une semaine. On s'occupe de tout — vous n'avez qu'à nous dire ce que vous offrez.</p>
+      <h1>Voyez votre site <span class="grad">avant même de nous appeler.</span></h1>
+      <p>Tapez le nom de votre commerce : l'aperçu se construit sous vos yeux. Site + logo, prix fixe, livré en une semaine.</p>
       <div class="cta">
         <a href="#prix" class="btn btn-primary">Voir les prix</a>
         <a href="#portfolio" class="btn btn-outline">Voir un exemple</a>
@@ -37,25 +37,78 @@
       <div class="trust">Aucun abonnement obligatoire · Paiement une fois le site livré</div>
     </div>
     <div class="hero-demo">
-      <div class="demo-card" id="demoCard">
-        <div class="demo-topbar"><span></span><span></span><span></span></div>
-        <div class="demo-frame" id="demoFrame">
-          <div class="demo-step" data-step="1">
-            <div class="demo-search">🔍 plombier saint-hyacinthe</div>
-            <div class="demo-result muted">Aucun site trouvé pour « Plomberie Dubois »</div>
-            <div class="demo-toast demo-toast-bad">😕 Client appelle le compétiteur</div>
-          </div>
-          <div class="demo-step" data-step="2">
-            <div class="demo-search">🔍 plombier saint-hyacinthe</div>
-            <div class="demo-result ok">🔧 Plomberie Dubois — voir le site</div>
-            <div class="demo-toast demo-toast-good">📞 Nouveau client : Marc D.</div>
+      <div class="builder" id="builder">
+        <div class="builder-head">
+          <span class="builder-tag">Essayez-le</span>
+          <span class="builder-title">Votre site, en 10 secondes</span>
+        </div>
+        <div class="builder-fields">
+          <label class="bf-name">Nom de votre commerce
+            <input type="text" id="bName" maxlength="40" placeholder="ex. Plomberie Dubois" autocomplete="off">
+          </label>
+          <label>Métier
+            <select id="bTrade"></select>
+          </label>
+          <label>Ville
+            <input type="text" id="bCity" maxlength="30" placeholder="ex. Saint-Hyacinthe" autocomplete="off">
+          </label>
+          <div class="bf-colors">
+            <span>Couleur</span>
+            <div class="swatches" id="bColors"></div>
           </div>
         </div>
-        <button class="demo-replay" id="demoReplay">↻ Rejouer</button>
+        <div class="preview" id="preview">
+          <div class="pv-bar"><span></span><span></span><span></span><div class="pv-url" id="pvUrl">votrecommerce.ca</div></div>
+          <div class="pv-site">
+            <div class="pv-nav"><span class="pv-logo" id="pvLogo"></span><span class="pv-call" id="pvCall">📞 Appeler</span></div>
+            <div class="pv-hero" id="pvHero">
+              <div class="pv-h1" id="pvH1"></div>
+              <div class="pv-sub" id="pvSub"></div>
+              <span class="pv-btn" id="pvBtn">Demander une soumission</span>
+            </div>
+            <div class="pv-services" id="pvServices"></div>
+          </div>
+        </div>
+        <div class="builder-actions">
+          <a href="#contact" class="btn btn-primary" id="bWant">Je veux ce site →</a>
+          <button type="button" class="builder-share" id="bShare">🔗 Copier le lien</button>
+        </div>
       </div>
-      <div class="demo-caption">Commerce fictif, pour l'exemple.</div>
     </div>
   </div>
+</section>
+
+<section id="avant-apres" class="wrap reveal">
+  <div class="eyebrow eyebrow-light">Avant / Après</div>
+  <h2 class="section-title">Glissez pour voir la différence</h2>
+  <p class="section-sub">À gauche, ce que vos clients trouvent aujourd'hui quand ils vous cherchent. À droite, ce qu'ils trouveraient avec WebVoisin.</p>
+  <div class="ba" id="ba">
+    <div class="ba-layer ba-before">
+      <div class="ba-label">Avant</div>
+      <div class="ba-google">
+        <div class="ba-search js-ba-search">🔍 plombier saint-hyacinthe</div>
+        <div class="ba-res"><div class="ba-res-t">Annuaire en ligne — 47 résultats</div><div class="ba-res-d">Votre fiche : incomplète, pas de photo</div></div>
+        <div class="ba-res"><div class="ba-res-t">Page Facebook — dernière publication en 2019</div><div class="ba-res-d">Aucun horaire · aucun prix</div></div>
+        <div class="ba-res ba-comp"><div class="ba-res-t">Votre compétiteur — site officiel</div><div class="ba-res-d">⭐ 4,8 · Appeler maintenant</div></div>
+        <div class="ba-sad">😕 Le client appelle le compétiteur</div>
+      </div>
+    </div>
+    <div class="ba-layer ba-after">
+      <div class="ba-label ba-label-after">Après</div>
+      <div class="ba-site">
+        <div class="ba-nav"><span class="ba-logo js-ba-name">🔧 Plomberie Dubois</span><span class="ba-call js-ba-color">📞 Appeler</span></div>
+        <div class="ba-hero">
+          <div class="ba-h1 js-ba-city">Votre plombier de confiance à Saint-Hyacinthe</div>
+          <span class="ba-btn js-ba-color">Demander une soumission</span>
+        </div>
+        <div class="ba-stars">⭐⭐⭐⭐⭐ « Rapide et honnête, je recommande »</div>
+        <div class="ba-happy">📞 3 nouveaux clients cette semaine</div>
+      </div>
+    </div>
+    <div class="ba-handle" aria-hidden="true"><span>⇆</span></div>
+    <input type="range" id="baRange" min="0" max="100" value="50" aria-label="Glisser pour comparer avant et après">
+  </div>
+  <p class="fine-print">Astuce : tapez le nom de votre commerce en haut de la page, il apparaît ici aussi.</p>
 </section>
 
 <section id="portfolio" class="wrap reveal">
@@ -101,16 +154,59 @@
   <div class="eyebrow eyebrow-light">Le processus</div>
   <h2 class="section-title">Trois étapes. Zéro technique.</h2>
   <div class="steps">
-    <div class="step"><div class="num">1</div><h4>On se parle</h4><p>Vous me dites ce que vous offrez, vos couleurs, vos photos.</p></div>
-    <div class="step"><div class="num">2</div><h4>Je construis</h4><p>Votre site est prêt en quelques jours, 2 rondes de corrections incluses.</p></div>
-    <div class="step"><div class="num">3</div><h4>Mise en ligne</h4><p>Le site est publié. Vous payez une fois le résultat approuvé.</p></div>
+    <div class="step"><div class="num">1</div><h4>On se parle</h4><p>On jase 15 minutes : ce que vous offrez, vos couleurs, vos photos. C'est tout.</p></div>
+    <div class="step"><div class="num">2</div><h4>Je construis</h4><p>Votre site est prêt en quelques jours. Quelque chose vous plaît pas? On le change (2 rondes incluses).</p></div>
+    <div class="step"><div class="num">3</div><h4>Mise en ligne</h4><p>Le site est en ligne. Vous payez seulement quand vous êtes satisfait.</p></div>
+  </div>
+</section>
+
+<section id="region" class="wrap reveal">
+  <div class="region">
+    <div class="region-text">
+      <div class="eyebrow eyebrow-light eyebrow-left">⚜️ Fait en Montérégie</div>
+      <h2>On est du coin.</h2>
+      <p>Pas une grosse agence de Montréal qui vous traite comme un numéro de dossier. On connaît la région, on peut se voir en personne, pis on répond au téléphone.</p>
+      <ul class="region-towns">
+        <li>Saint-Hyacinthe</li><li>Granby</li><li>Saint-Jean-sur-Richelieu</li><li>Chambly</li>
+        <li>Beloeil</li><li>Saint-Bruno</li><li>Longueuil</li><li>Brossard</li>
+        <li>Châteauguay</li><li>Vaudreuil</li><li>Sorel-Tracy</li><li>Valleyfield</li>
+      </ul>
+    </div>
+    <div class="region-map" aria-hidden="true">
+      <svg viewBox="0 0 600 380" role="img">
+        <defs>
+          <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#d9dbea"/></pattern>
+        </defs>
+        <rect x="0" y="0" width="600" height="380" rx="22" fill="url(#dots)"/>
+        <!-- Fleuve Saint-Laurent -->
+        <path d="M-10,215 C 90,175 160,135 225,105 S 360,48 610,6" fill="none" stroke="#bfdbfe" stroke-width="16" stroke-linecap="round"/>
+        <!-- Rivière Richelieu -->
+        <path d="M382,36 C 362,82 342,108 336,128 S 306,180 302,205 S 296,250 293,300 L 292,390" fill="none" stroke="#bfdbfe" stroke-width="7" stroke-linecap="round"/>
+        <!-- Rivière Yamaska -->
+        <path d="M418,22 C 425,70 440,100 446,128 S 462,200 478,262" fill="none" stroke="#dbeafe" stroke-width="5" stroke-linecap="round"/>
+        <g class="towns" font-family="Inter, sans-serif" font-size="12.5" font-weight="600" fill="#1c1f3d">
+          <g class="pin hq" transform="translate(446,128)"><circle r="16" class="pulse"/><circle r="7"/><text x="13" y="-12">Saint-Hyacinthe</text></g>
+          <g class="pin" transform="translate(478,265)"><circle r="5"/><text x="10" y="4">Granby</text></g>
+          <g class="pin" transform="translate(293,268)"><circle r="5"/><text x="10" y="4">Saint-Jean</text></g>
+          <g class="pin" transform="translate(302,205)"><circle r="5"/><text x="10" y="4">Chambly</text></g>
+          <g class="pin" transform="translate(336,128)"><circle r="5"/><text x="-56" y="-10">Beloeil</text></g>
+          <g class="pin" transform="translate(284,152)"><circle r="5"/><text x="-80" y="18">Saint-Bruno</text></g>
+          <g class="pin" transform="translate(228,122)"><circle r="5"/><text x="-74" y="-8">Longueuil</text></g>
+          <g class="pin" transform="translate(214,172)"><circle r="5"/><text x="-70" y="16">Brossard</text></g>
+          <g class="pin" transform="translate(150,216)"><circle r="5"/><text x="-84" y="18">Châteauguay</text></g>
+          <g class="pin" transform="translate(66,160)"><circle r="5"/><text x="-10" y="-12">Vaudreuil</text></g>
+          <g class="pin" transform="translate(42,258)"><circle r="5"/><text x="10" y="4">Valleyfield</text></g>
+          <g class="pin" transform="translate(382,38)"><circle r="5"/><text x="10" y="4">Sorel-Tracy</text></g>
+        </g>
+      </svg>
+    </div>
   </div>
 </section>
 
 <section id="prix" class="wrap reveal">
   <div class="eyebrow eyebrow-light">Tarification</div>
   <h2 class="section-title">Le prix, en clair</h2>
-  <p class="section-sub">Pas d'abonnement mensuel caché. Vous payez une fois, le site est à vous.</p>
+  <p class="section-sub">Pas d'abonnement caché, pas de petits caractères, pas de chichi. Vous payez une fois, le site est à vous.</p>
   <div class="grid-3">
     <div class="card">
       <h3>Site seul</h3>
@@ -175,8 +271,8 @@
     <div class="contact-grid">
       <div class="contact-intro">
         <div class="contact-avatar">É</div>
-        <h2>Prêt à avoir votre site ?</h2>
-        <p>Réponse rapide, premier échange gratuit, sans engagement.</p>
+        <h2>On règle ça?</h2>
+        <p>Écrivez-moi ou appelez-moi directement. Premier échange gratuit, aucune obligation. Je réponds vite, promis.</p>
         <div class="contact-links">
           <a href="tel:+14507063949">📞 450-706-3949</a>
           <a href="#" class="js-email">✉️ [VOTRE COURRIEL]</a>
@@ -212,7 +308,7 @@
       <a href="#prix">Prix</a>
       <a href="#faq">Questions</a>
     </nav>
-    <div class="footer-note">© 2026 WebVoisin — Montérégie, QC</div>
+    <div class="footer-note">© 2026 WebVoisin — Fait avec soin en Montérégie ⚜️</div>
   </div>
 </footer>
 
