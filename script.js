@@ -27,31 +27,31 @@
 
   // ---------- Aperçu instantané ----------
   var TRADES = {
-    plombier:    { label: "Plombier",            emoji: "🔧", color: "#1d4ed8", name: "Plomberie Dubois",
+    plombier:    { label: "Plombier",            search: "plombier", emoji: "🔧", color: "#1d4ed8", name: "Plomberie Dubois",
                    h1: "Votre plombier de confiance à {ville}", sub: "Urgences 24/7, chauffe-eau, débouchage. Service rapide et honnête.",
                    services: [["🚿", "Débouchage"], ["🔥", "Chauffe-eau"], ["🛁", "Salle de bain"]] },
-    coiffure:    { label: "Salon de coiffure",   emoji: "💇", color: "#be185d", name: "Salon Élégance",
+    coiffure:    { label: "Salon de coiffure",   search: "salon de coiffure", emoji: "💇", color: "#be185d", name: "Salon Élégance",
                    h1: "Votre salon de coiffure à {ville}", sub: "Coupe, couleur, coiffure d'événement. Prenez rendez-vous en ligne.",
                    services: [["✂️", "Coupe"], ["🎨", "Couleur"], ["💍", "Mariage"]] },
-    paysagiste:  { label: "Paysagiste",          emoji: "🌳", color: "#15803d", name: "Paysagement Vert Nature",
+    paysagiste:  { label: "Paysagiste",          search: "paysagiste", emoji: "🌳", color: "#15803d", name: "Paysagement Vert Nature",
                    h1: "Un terrain impeccable à {ville}", sub: "Tonte, aménagement, déneigement. Devis gratuit sur place.",
                    services: [["🌿", "Pelouse"], ["🌸", "Jardins"], ["❄️", "Déneigement"]] },
-    restaurant:  { label: "Restaurant",          emoji: "🍽️", color: "#c2410c", name: "Resto Chez Lucie",
+    restaurant:  { label: "Restaurant",          search: "restaurant", emoji: "🍽️", color: "#c2410c", name: "Resto Chez Lucie",
                    h1: "Bonne bouffe maison à {ville}", sub: "Menu du jour, pour emporter et traiteur. Venez nous voir!",
                    services: [["🥘", "Menu du jour"], ["🥡", "Pour emporter"], ["🎉", "Traiteur"]] },
-    electricien: { label: "Électricien",         emoji: "⚡", color: "#ca8a04", name: "Électrique Tremblay",
+    electricien: { label: "Électricien",         search: "électricien", emoji: "⚡", color: "#ca8a04", name: "Électrique Tremblay",
                    h1: "Votre électricien à {ville}", sub: "Résidentiel et commercial. Maître électricien certifié.",
                    services: [["💡", "Éclairage"], ["🔌", "Panneaux"], ["🚗", "Bornes de recharge"]] },
-    mecanique:   { label: "Garage / Mécanique",  emoji: "🚗", color: "#475569", name: "Garage Gagnon",
+    mecanique:   { label: "Garage / Mécanique",  search: "garage mécanique", emoji: "🚗", color: "#475569", name: "Garage Gagnon",
                    h1: "Votre garage de confiance à {ville}", sub: "Entretien, freins, pneus. Estimation gratuite.",
                    services: [["🛞", "Pneus"], ["🛑", "Freins"], ["🔩", "Entretien"]] },
-    nettoyage:   { label: "Entretien ménager",   emoji: "🧽", color: "#0891b2", name: "Nettoyage Éclat",
+    nettoyage:   { label: "Entretien ménager",   search: "entretien ménager", emoji: "🧽", color: "#0891b2", name: "Nettoyage Éclat",
                    h1: "Une maison propre à {ville}, sans effort", sub: "Résidentiel et commercial. Produits écologiques.",
                    services: [["🏠", "Résidentiel"], ["🏢", "Commercial"], ["✨", "Grand ménage"]] },
-    esthetique:  { label: "Esthétique",          emoji: "💅", color: "#9333ea", name: "Esthétique Belle-Peau",
+    esthetique:  { label: "Esthétique",          search: "esthéticienne", emoji: "💅", color: "#9333ea", name: "Esthétique Belle-Peau",
                    h1: "Prenez soin de vous à {ville}", sub: "Soins du visage, manucure, épilation. Réservez en ligne.",
                    services: [["🧖", "Soins visage"], ["💅", "Manucure"], ["🌸", "Épilation"]] },
-    renovation:  { label: "Rénovation",          emoji: "🔨", color: "#b45309", name: "Rénovations Côté",
+    renovation:  { label: "Rénovation",          search: "rénovation", emoji: "🔨", color: "#b45309", name: "Rénovations Côté",
                    h1: "Vos rénovations à {ville}, bien faites", sub: "Cuisines, salles de bain, sous-sols. Licence RBQ.",
                    services: [["🍳", "Cuisines"], ["🛁", "Salles de bain"], ["🏚️", "Sous-sols"]] }
   };
@@ -142,7 +142,7 @@
       document.querySelectorAll(".js-ba-name").forEach(function (el) { el.textContent = v.t.emoji + " " + v.name; });
       document.querySelectorAll(".js-ba-city").forEach(function (el) { el.textContent = v.t.h1.replace("{ville}", v.city); });
       document.querySelectorAll(".js-ba-color").forEach(function (el) { el.style.background = v.color; });
-      document.querySelectorAll(".js-ba-search").forEach(function (el) { el.textContent = "🔍 " + v.t.label.toLowerCase() + " " + v.city.toLowerCase(); });
+      document.querySelectorAll(".js-ba-search").forEach(function (el) { el.textContent = "🔍 " + v.t.search + " " + v.city.toLowerCase(); });
 
       // L'aperçu "pulse" légèrement à chaque changement
       var pv = $("preview");

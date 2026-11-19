@@ -299,3 +299,9 @@ footer{padding:34px 0;text-align:center;font-size:13px;color:#9ca3af}
   .region{grid-template-columns:1fr;padding:28px 20px}
   .region-text h2{font-size:30px}
 }
+
+/* correctifs : respiration entre sections, ancres sous la nav, champs */
+section.wrap{padding-top:64px;padding-bottom:64px}
+section{scroll-margin-top:76px}
+.builder-fields input,.builder-fields select{min-width:0;width:100%}
+.ba-handle span{font-size:18px}
