@@ -25,15 +25,36 @@
 </header>
 
 <section class="hero">
-  <div class="wrap">
-    <div class="eyebrow">💼 Pour les commerçants &amp; artisans de la Montérégie</div>
-    <h1>Un site web <span class="grad">professionnel</span> pour votre entreprise,<br>sans prise de tête.</h1>
-    <p>Site web + logo, prix fixe, livré en une semaine. Fait pour les commerçants et artisans de la Montérégie qui n'ont pas encore de présence en ligne.</p>
-    <div class="cta">
-      <a href="#prix" class="btn btn-primary">Voir les prix</a>
-      <a href="#portfolio" class="btn btn-outline">Voir un exemple</a>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow">💼 Pour les commerçants &amp; artisans de la Montérégie</div>
+      <h1>Sans site web, vos <span class="grad">clients appellent<br>le compétiteur.</span></h1>
+      <p>Site web + logo, prix fixe, livré en une semaine. Fait pour les commerçants et artisans de la Montérégie qui n'ont pas encore de présence en ligne.</p>
+      <div class="cta">
+        <a href="#prix" class="btn btn-primary">Voir les prix</a>
+        <a href="#portfolio" class="btn btn-outline">Voir un exemple</a>
+      </div>
+      <div class="trust">Aucun abonnement obligatoire · Paiement une fois le site livré</div>
     </div>
-    <div class="trust">Aucun abonnement obligatoire · Paiement une fois le site livré</div>
+    <div class="hero-demo">
+      <div class="demo-card" id="demoCard">
+        <div class="demo-topbar"><span></span><span></span><span></span></div>
+        <div class="demo-frame" id="demoFrame">
+          <!-- frames injected / toggled by script.js -->
+          <div class="demo-step" data-step="1">
+            <div class="demo-search">🔍 plombier saint-hyacinthe</div>
+            <div class="demo-result muted">Aucun site trouvé pour "Plomberie Dubois"</div>
+            <div class="demo-toast demo-toast-bad">😕 Client appelle le compétiteur</div>
+          </div>
+          <div class="demo-step" data-step="2">
+            <div class="demo-search">🔍 plombier saint-hyacinthe</div>
+            <div class="demo-result ok">🔧 Plomberie Dubois — voir le site</div>
+            <div class="demo-toast demo-toast-good">📞 Nouveau client : Marc D.</div>
+          </div>
+        </div>
+        <button class="demo-replay" id="demoReplay">↻ Rejouer</button>
+      </div>
+    </div>
   </div>
 </section>
 

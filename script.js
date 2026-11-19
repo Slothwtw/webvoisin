@@ -25,6 +25,34 @@
     }, { passive: true });
   }
 
+  // Démo animée du hero : alterne "sans site" / "avec WebVoisin"
+  var demoSteps = document.querySelectorAll(".demo-step");
+  var demoReplay = document.getElementById("demoReplay");
+  if (demoSteps.length) {
+    var demoIndex = 0;
+    var demoTimer = null;
+    function showDemoStep(i) {
+      demoSteps.forEach(function (el, idx) {
+        el.classList.toggle("active", idx === i);
+      });
+    }
+    function startDemoLoop() {
+      if (demoTimer) clearInterval(demoTimer);
+      showDemoStep(demoIndex);
+      demoTimer = setInterval(function () {
+        demoIndex = (demoIndex + 1) % demoSteps.length;
+        showDemoStep(demoIndex);
+      }, 3200);
+    }
+    startDemoLoop();
+    if (demoReplay) {
+      demoReplay.addEventListener("click", function () {
+        demoIndex = 0;
+        startDemoLoop();
+      });
+    }
+  }
+
   // Courriel assemblé en JS : évite qu'un robot le récolte dans le HTML brut
   var user = "webvoisin8";
   var domain = "gmail.com";
