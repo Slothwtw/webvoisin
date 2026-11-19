@@ -6,6 +6,7 @@
 <title>WebVoisin — Sites web pour entreprises locales</title>
 <meta name="description" content="Site web simple et logo pour votre entreprise locale, prix fixe, livré en une semaine.">
 <meta name="robots" content="index, follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" href="logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -287,18 +288,18 @@
       </div>
       <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact">
-        <p class="hp-field"><label>Ne pas remplir : <input name="bot-field"></label></p>
+        <p class="hp-field" aria-hidden="true"><label>Ne pas remplir : <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <label>Nom
-          <input type="text" name="name" required>
+          <input type="text" name="name" required maxlength="80" autocomplete="name">
         </label>
         <label>Courriel ou téléphone
-          <input type="text" name="contact-info" required>
+          <input type="text" name="contact-info" required maxlength="120" autocomplete="email">
         </label>
         <label>Votre entreprise
-          <input type="text" name="business">
+          <input type="text" name="business" maxlength="120" autocomplete="organization">
         </label>
         <label>Message
-          <textarea name="message" rows="3" placeholder="Parlez-nous un peu de votre entreprise..."></textarea>
+          <textarea name="message" rows="3" maxlength="2000" placeholder="Parlez-nous un peu de votre entreprise..."></textarea>
         </label>
         <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
       </form>
