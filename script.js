@@ -53,7 +53,10 @@
                    services: [["🧖", "Soins visage"], ["💅", "Manucure"], ["🌸", "Épilation"]] },
     renovation:  { label: "Rénovation",          search: "rénovation", emoji: "🔨", color: "#b45309", name: "Rénovations Côté",
                    h1: "Vos rénovations à {ville}, bien faites", sub: "Cuisines, salles de bain, sous-sols. Licence RBQ.",
-                   services: [["🍳", "Cuisines"], ["🛁", "Salles de bain"], ["🏚️", "Sous-sols"]] }
+                   services: [["🍳", "Cuisines"], ["🛁", "Salles de bain"], ["🏚️", "Sous-sols"]] },
+    autre:       { label: "Autre",               search: "commerce", emoji: "🏪", color: "#1c1f3d", name: "Votre Commerce",
+                   h1: "Votre commerce à {ville}", sub: "Vos services, vos heures, vos coordonnées. Tout au même endroit.",
+                   services: [["⭐", "Services"], ["🕒", "Heures"], ["📍", "Nous joindre"]] }
   };
   var COLORS = ["#1d4ed8", "#be185d", "#15803d", "#c2410c", "#ca8a04", "#0891b2", "#9333ea", "#1c1f3d"];
   var DEFAULT_CITY = "Saint-Hyacinthe";

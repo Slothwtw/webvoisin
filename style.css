@@ -305,3 +305,24 @@ section.wrap{padding-top:64px;padding-bottom:64px}
 section{scroll-margin-top:76px}
 .builder-fields input,.builder-fields select{min-width:0;width:100%}
 .ba-handle span{font-size:18px}
+
+/* ================= MINI-CAPTURES DES RÉALISATIONS ================= */
+.mini{--c:#1d4ed8;--tint:#eef2ff;aspect-ratio:16/11;background:#fff;border-bottom:1px solid #ececf3;display:flex;flex-direction:column;overflow:hidden;font-family:'Inter',system-ui,sans-serif;transition:transform .35s ease;transform-origin:top center}
+.example-card:hover .mini{transform:scale(1.03)}
+.mini-blue{--c:#1d4ed8;--tint:#eef2ff}
+.mini-pink{--c:#be185d;--tint:#fdf2f8}
+.mini-green{--c:#15803d;--tint:#f0fdf4}
+.mini-bar{display:flex;align-items:center;gap:4px;padding:6px 8px;background:#f3f3f8;border-bottom:1px solid #e7e7ef}
+.mini-bar > span{width:6px;height:6px;border-radius:50%;background:#d4d4de}
+.mini-url{margin-left:6px;flex:1;background:#fff;border-radius:4px;padding:2px 8px;font-size:9px;color:#8a8f9c}
+.mini-nav{display:flex;justify-content:space-between;align-items:center;padding:7px 12px;border-bottom:1px solid #f2f2f6}
+.mini-nav b{font-size:10.5px;font-weight:800;color:var(--c)}
+.mini-nav i{font-style:normal;font-size:8.5px;font-weight:700;color:#fff;background:var(--c);padding:3px 7px;border-radius:4px}
+.mini-hero{flex:1;background:var(--tint);padding:12px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:5px}
+.mini-h{font-family:var(--font-display);font-weight:800;font-size:13px;line-height:1.2;color:#111827;max-width:92%}
+.mini-p{font-size:9px;color:#5b6474}
+.mini-btn{margin-top:3px;font-size:8.5px;font-weight:700;color:#fff;background:var(--c);padding:5px 10px;border-radius:5px}
+.mini-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:8px 10px 10px}
+.mini-cards div{background:#f6f6fa;border-radius:5px;padding:6px 7px;display:flex;flex-direction:column;gap:1px}
+.mini-cards b{font-size:8.5px;font-weight:700;color:#111827}
+.mini-cards i{font-style:normal;font-size:7.5px;color:#8a8f9c}
