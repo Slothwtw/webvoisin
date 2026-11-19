@@ -358,3 +358,41 @@ section{scroll-margin-top:76px}
 .mini-cards div{background:#f6f6fa;border-radius:5px;padding:6px 7px;display:flex;flex-direction:column;gap:1px}
 .mini-cards b{font-size:8.5px;font-weight:700;color:#111827}
 .mini-cards i{font-style:normal;font-size:7.5px;color:#8a8f9c}
+
+/* ================= CÔTÉS DE PAGE : couleur + motifs dans les bandes blanches ================= */
+.wrap{max-width:1140px}
+section.wrap{position:relative;isolation:isolate}
+section.wrap::before{
+  content:"";position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(460px 340px at 3% 30%, var(--g1,rgba(99,102,241,.16)), transparent 70%),
+    radial-gradient(420px 320px at 97% 72%, var(--g2,rgba(236,72,153,.14)), transparent 70%),
+    radial-gradient(#d9d9ea 1.3px, transparent 1.6px) 0 0/22px 22px;
+  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 12%,transparent 28%,transparent 72%,#000 88%,#000 100%);
+          mask-image:linear-gradient(90deg,#000 0,#000 12%,transparent 28%,transparent 72%,#000 88%,#000 100%)}
+section.wrap::after{
+  content:"";position:absolute;z-index:-1;pointer-events:none;width:70px;height:70px;border-radius:20px;
+  border:3px solid var(--s1,#6366f1);opacity:.5;top:22%;left:calc(50% - 50vw + 5vw);
+  animation:drift 8s ease-in-out infinite}
+@keyframes drift{0%,100%{transform:translateY(0) rotate(12deg)}50%{transform:translateY(-22px) rotate(-6deg)}}
+
+#avant-apres{--g1:rgba(34,197,94,.15);--g2:rgba(99,102,241,.16);--s1:#22c55e}
+#portfolio{--g1:rgba(236,72,153,.14);--g2:rgba(6,182,212,.15);--s1:#ec4899}
+#comment{--g1:rgba(249,115,22,.15);--g2:rgba(99,102,241,.15);--s1:#f97316}
+#chemins{--g1:rgba(168,85,247,.16);--g2:rgba(34,197,94,.15);--s1:#a855f7}
+#prix{--g1:rgba(234,179,8,.17);--g2:rgba(236,72,153,.14);--s1:#eab308}
+#faq{--g1:rgba(6,182,212,.15);--g2:rgba(249,115,22,.15);--s1:#06b6d4}
+#contact{--g1:rgba(99,102,241,.17);--g2:rgba(236,72,153,.16);--s1:#6366f1}
+
+/* alterne : formes à droite, en rond, pour varier */
+#portfolio::after,#chemins::after,#faq::after{left:auto;right:calc(50% - 50vw + 5vw);border-radius:50%;top:55%;animation-delay:-3s}
+#prix::after{border-radius:50%;width:46px;height:46px;border-width:10px;opacity:.35}
+#comment::after{width:54px;height:54px;border-radius:14px;background:var(--s1);opacity:.18;border:none;top:60%}
+
+/* petites formes au-dessus/en dessous pour remplir sans encombrer */
+.hero + section.wrap{margin-top:0}
+@media (max-width:1300px){ section.wrap::after{display:none} }
+@media (max-width:860px){
+  section.wrap::before{-webkit-mask-image:none;mask-image:none;opacity:.5}
+}
+@media (prefers-reduced-motion: reduce){ section.wrap::after{animation:none} }
