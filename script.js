@@ -114,7 +114,7 @@
 
     function update() {
       var v = currentValues();
-      $("pvUrl").textContent = slug(v.name) + ".ca";
+      $("pvUrl").textContent = "webvoisin-sites.pages.dev/" + slug(v.name);
       $("pvLogo").textContent = v.name;
       $("pvLogo").style.color = v.color;
       $("pvCall").style.background = v.color;
