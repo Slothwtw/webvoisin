@@ -1,3 +1,7 @@
+# Ne republie pas le site WebVoisin quand seuls les sites clients changent (ils sont sur Cloudflare Pages)
+[build]
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)clients'"
+
 # En-têtes de sécurité appliqués à toutes les pages
 [[headers]]
   for = "/*"
@@ -14,6 +18,12 @@
     X-DNS-Prefetch-Control = "off"
 
 # Le fichier de config n'a pas à être servi publiquement
+[[redirects]]
+  from = "/clients/_headers"
+  to = "/404"
+  status = 404
+  force = true
+
 [[redirects]]
   from = "/netlify.toml"
   to = "/404"
