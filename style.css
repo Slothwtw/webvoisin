@@ -508,3 +508,107 @@ section.wrap::after{
 .pv-need{display:none}
 .preview.need-job .pv-site{filter:blur(5px) grayscale(.4);opacity:.55;pointer-events:none}
 .preview.need-job .pv-need{display:flex;position:absolute;inset:34px 0 0;z-index:3;align-items:center;justify-content:center;text-align:center;padding:24px;font-weight:700;font-size:14px;color:var(--ink)}
+
+/* ================= PLUS DE COULEUR ================= */
+:root{
+  --coral:#ff6b3d;--coral2:#ff9a3d;--teal:#0ea5a4;--pink:#ec4899;--amber:#f59e0b;--green:#22c55e;--sky:#38bdf8;
+  --peach:#fff3ec;--mint:#ebfaf5;--lilac:#f4f0ff;--butter:#fff9e6;
+}
+
+/* barre multicolore sous le menu */
+.nav{border-bottom:none}
+.nav::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,var(--coral),var(--amber),var(--green),var(--teal),var(--accent),var(--pink))}
+
+/* boutons chauds (ressortent sur le marine) */
+.btn-primary{background:linear-gradient(100deg,var(--coral),var(--coral2));box-shadow:0 8px 20px rgba(255,107,61,.35)}
+.btn-primary:hover{box-shadow:0 14px 28px rgba(255,107,61,.45)}
+.btn-outline{color:var(--coral);border-color:var(--coral)}
+.btn-outline:hover{background:var(--coral);box-shadow:0 10px 22px rgba(255,107,61,.25)}
+
+/* hero : lueurs multicolores */
+.hero{background:
+  radial-gradient(50% 60% at 88% 8%, rgba(236,72,153,.38), transparent 62%),
+  radial-gradient(45% 55% at 6% 95%, rgba(14,165,164,.34), transparent 62%),
+  radial-gradient(38% 45% at 55% 100%, rgba(245,158,11,.22), transparent 65%),
+  linear-gradient(160deg,var(--navy),var(--navy2))}
+.hero::before{background:linear-gradient(135deg,#38bdf8,#818cf8)}
+.hero::after{background:linear-gradient(135deg,#fbbf24,#fb7185);opacity:.38}
+.hero h1 .grad{background:linear-gradient(100deg,#fcd34d,#fb923c 45%,#f472b6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .eyebrow{background:rgba(255,154,61,.14);border-color:rgba(255,154,61,.4);color:#ffd8b0}
+
+/* titres de section : trait multicolore */
+h2.section-title::after{content:"";display:block;width:84px;height:5px;border-radius:5px;margin:14px auto 0;background:linear-gradient(90deg,var(--coral),var(--amber),var(--teal))}
+.eyebrow-light{color:var(--coral)}
+.eyebrow-left{background:linear-gradient(90deg,var(--coral),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* sections en bandes de couleur pleine largeur */
+#portfolio{padding-bottom:84px}
+#chemins{padding-top:84px}
+
+/* étapes : une couleur chacune */
+.step{background:#fff;border:1px solid transparent;border-top:5px solid var(--c);box-shadow:0 10px 26px rgba(17,24,39,.06);transition:transform .25s,box-shadow .25s}
+.step:hover{transform:translateY(-5px);box-shadow:0 18px 34px rgba(17,24,39,.1)}
+.step .num{background:var(--c);color:#fff;box-shadow:0 8px 16px color-mix(in srgb,var(--c) 40%,transparent)}
+.steps .step:nth-child(1){--c:var(--coral)}
+.steps .step:nth-child(2){--c:var(--teal)}
+.steps .step:nth-child(3){--c:var(--amber)}
+
+/* prix : cartes colorées */
+.grid-3 .card{background:#fff;border-top:5px solid var(--c);box-shadow:0 10px 26px rgba(17,24,39,.06)}
+.grid-3 .card:nth-child(1){--c:var(--teal)}
+.grid-3 .card:nth-child(2){--c:var(--coral)}
+.grid-3 .card:nth-child(3){--c:var(--pink)}
+.grid-3 .card .price{color:var(--c);-webkit-text-fill-color:var(--c)}
+.grid-3 .card li::before{color:var(--c)}
+.card.featured{background:linear-gradient(160deg,var(--navy),#3a2a5e);box-shadow:0 20px 40px rgba(255,107,61,.25),0 0 0 2px var(--coral)}
+.card.featured .price{color:#ffb27a;-webkit-text-fill-color:#ffb27a}
+.card.featured li::before{color:var(--coral2)}
+.card.featured::before{background:linear-gradient(100deg,var(--coral),var(--amber));color:#fff}
+
+/* FAQ : numéros de toutes les couleurs */
+.faq-item{background:#fff;border:1px solid #e6e0f7;border-radius:14px;margin-bottom:10px;padding:0 14px;transition:box-shadow .2s}
+.faq-item:hover,.faq-item[open]{box-shadow:0 10px 24px rgba(79,70,229,.1)}
+.faq-list{border-top:none}
+.faq-item{border-bottom:1px solid #e6e0f7}
+.faq-num{min-width:34px;height:34px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;color:#fff;background:var(--c)}
+.faq-item:nth-child(5n+1){--c:var(--coral)}
+.faq-item:nth-child(5n+2){--c:var(--teal)}
+.faq-item:nth-child(5n+3){--c:var(--amber)}
+.faq-item:nth-child(5n+4){--c:var(--pink)}
+.faq-item:nth-child(5n+5){--c:var(--accent)}
+.faq-item summary::after{color:var(--c)}
+.faq-item p{margin-left:52px}
+
+/* bande « métiers » plus chaude */
+.metiers{background:linear-gradient(180deg,#fff 0,#fff1e4 22%,#fff6ea 78%,#fff 100%)}
+.metiers-head h2{color:var(--navy)}
+.mt-item figcaption{background:var(--coral);color:#fff}
+
+/* « Tous les chemins » : plus vif */
+.region{box-shadow:0 18px 44px rgba(236,72,153,.1)}
+
+/* contact : lueurs chaudes */
+.contact-box{background:
+  radial-gradient(50% 70% at 100% 0%, rgba(255,107,61,.35), transparent 65%),
+  radial-gradient(45% 60% at 0% 100%, rgba(14,165,164,.3), transparent 65%),
+  var(--navy)}
+.contact-avatar{background:linear-gradient(135deg,var(--amber),var(--coral))}
+.contact-links a:hover{color:var(--coral)}
+
+/* pied de page */
+.site-footer{border-top:4px solid transparent;border-image:linear-gradient(90deg,var(--coral),var(--amber),var(--green),var(--teal),var(--accent),var(--pink)) 1}
+.footer-links a:hover{color:var(--coral)}
+.nav .links a::after{background:var(--coral)}
+.nav .links a:hover{color:var(--coral)}
+
+/* taches de couleur : fondu doux en haut et en bas (plus de bord net) */
+section.wrap::before{
+  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 12%,transparent 30%,transparent 70%,#000 88%,#000 100%),linear-gradient(180deg,transparent 0,#000 28%,#000 72%,transparent 100%);
+  -webkit-mask-composite:source-in;
+          mask-image:linear-gradient(90deg,#000 0,#000 12%,transparent 30%,transparent 70%,#000 88%,#000 100%),linear-gradient(180deg,transparent 0,#000 28%,#000 72%,transparent 100%);
+          mask-composite:intersect}
+#comment{--g1:rgba(255,107,61,.22);--g2:rgba(14,165,164,.2)}
+#prix{--g1:rgba(14,165,164,.2);--g2:rgba(236,72,153,.18)}
+#faq{--g1:rgba(236,72,153,.18);--g2:rgba(245,158,11,.22)}
+#portfolio{--g1:rgba(236,72,153,.18);--g2:rgba(14,165,164,.18)}
+#chemins{--g1:rgba(245,158,11,.2);--g2:rgba(168,85,247,.18)}
