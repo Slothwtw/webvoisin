@@ -464,3 +464,31 @@ section.wrap::after{
 .sc-salon .sc-desk,.sc-pain .sc-desk{box-shadow:0 25px 50px -15px rgba(59,36,24,.35)}
 @media (max-width:860px){.showcase,.showcase.flip{grid-template-columns:1fr;padding:28px;gap:28px}.showcase.flip .sc-text{order:0}.sc-devices{padding:0 24px 24px 0}.showcase h3{font-size:28px}.sc-hero{max-width:75%}}
 @media (prefers-reduced-motion:reduce){.sc-screen{animation:none}}
+
+/* MÉTIERS — bande de photos qui défile */
+.metiers{padding:84px 0 76px;background:#faf7f2;overflow:hidden;position:relative}
+.metiers-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:36px}
+.metiers-head h2{font-size:38px;line-height:1.1;letter-spacing:-.8px;margin:0;color:var(--navy)}
+.metiers-head p{max-width:380px;margin:0;color:var(--muted);font-size:16px}
+.mt-track-wrap{-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mt-track{display:flex;width:max-content;animation:mtScroll 48s linear infinite}
+.mt-track-wrap:hover .mt-track{animation-play-state:paused}
+.mt-group{display:flex;align-items:flex-start;gap:18px;padding-right:18px}
+.mt-item{margin:0;position:relative;width:240px;flex:none}
+.mt-item:nth-child(even){margin-top:34px}
+.mt-item img{display:block;width:240px;height:300px;object-fit:cover;border-radius:14px;background:#e9e3d8;transition:transform .5s ease}
+.mt-item:hover img{transform:scale(1.03)}
+.mt-item figcaption{position:absolute;left:12px;bottom:12px;background:#fff;color:var(--navy);font-weight:700;font-size:13px;padding:6px 11px;border-radius:8px}
+@keyframes mtScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (max-width:860px){
+  .metiers{padding:60px 0 56px}
+  .metiers-head{flex-direction:column;align-items:flex-start;gap:12px}
+  .metiers-head h2{font-size:30px}
+  .mt-item,.mt-item img{width:180px}
+  .mt-item img{height:230px}
+  .mt-track{animation-duration:36s}
+}
+@media (prefers-reduced-motion: reduce){
+  .mt-track{animation:none}
+  .mt-track-wrap{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
+}
