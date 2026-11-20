@@ -27,36 +27,46 @@
 
   // ---------- Aperçu instantané ----------
   var TRADES = {
-    plombier:    { label: "Plombier",            search: "plombier", emoji: "🔧", color: "#1d4ed8", name: "Plomberie Dubois",
-                   h1: "Votre plombier de confiance à {ville}", sub: "Urgences 24/7, chauffe-eau, débouchage. Service rapide et honnête.",
-                   services: [["Débouchage", "Intervention rapide"], ["Chauffe-eau", "Toutes marques"], ["Salle de bain", "Rénovation"]] },
-    coiffure:    { label: "Salon de coiffure",   search: "salon de coiffure", emoji: "💇", color: "#be185d", name: "Salon Élégance",
-                   h1: "Votre salon de coiffure à {ville}", sub: "Coupe, couleur, coiffure d'événement. Prenez rendez-vous en ligne.",
-                   services: [["Coupe", "Femmes et hommes"], ["Couleur", "Mèches, balayage"], ["Événement", "Mariages"]] },
-    paysagiste:  { label: "Paysagiste",          search: "paysagiste", emoji: "🌳", color: "#15803d", name: "Paysagement Vert Nature",
-                   h1: "Un terrain impeccable à {ville}", sub: "Tonte, aménagement, déneigement. Devis gratuit sur place.",
-                   services: [["Pelouse", "Tonte, aération"], ["Jardins", "Pavé-uni, haies"], ["Déneigement", "Résidentiel"]] },
-    restaurant:  { label: "Restaurant",          search: "restaurant", emoji: "🍽️", color: "#c2410c", name: "Resto Chez Lucie",
-                   h1: "Bonne bouffe maison à {ville}", sub: "Menu du jour, pour emporter et traiteur. Venez nous voir!",
-                   services: [["Menu du jour", "Fait maison"], ["Pour emporter", "Commandez d'avance"], ["Traiteur", "Groupes et fêtes"]] },
-    electricien: { label: "Électricien",         search: "électricien", emoji: "⚡", color: "#ca8a04", name: "Électrique Tremblay",
-                   h1: "Votre électricien à {ville}", sub: "Résidentiel et commercial. Maître électricien certifié.",
-                   services: [["Éclairage", "Intérieur, extérieur"], ["Panneaux", "Mise aux normes"], ["Bornes", "Recharge auto"]] },
-    mecanique:   { label: "Garage / Mécanique",  search: "garage mécanique", emoji: "🚗", color: "#475569", name: "Garage Gagnon",
-                   h1: "Votre garage de confiance à {ville}", sub: "Entretien, freins, pneus. Estimation gratuite.",
-                   services: [["Pneus", "Pose, entreposage"], ["Freins", "Inspection"], ["Entretien", "Toutes marques"]] },
-    nettoyage:   { label: "Entretien ménager",   search: "entretien ménager", emoji: "🧽", color: "#0891b2", name: "Nettoyage Éclat",
-                   h1: "Une maison propre à {ville}, sans effort", sub: "Résidentiel et commercial. Produits écologiques.",
-                   services: [["Résidentiel", "Hebdo ou mensuel"], ["Commercial", "Bureaux, commerces"], ["Grand ménage", "Printemps, automne"]] },
-    esthetique:  { label: "Esthétique",          search: "esthéticienne", emoji: "💅", color: "#9333ea", name: "Esthétique Belle-Peau",
-                   h1: "Prenez soin de vous à {ville}", sub: "Soins du visage, manucure, épilation. Réservez en ligne.",
-                   services: [["Soins visage", "Sur mesure"], ["Manucure", "Gel, vernis"], ["Épilation", "Cire douce"]] },
-    renovation:  { label: "Rénovation",          search: "rénovation", emoji: "🔨", color: "#b45309", name: "Rénovations Côté",
-                   h1: "Vos rénovations à {ville}, bien faites", sub: "Cuisines, salles de bain, sous-sols. Licence RBQ.",
-                   services: [["Cuisines", "Clé en main"], ["Salles de bain", "Douche, céramique"], ["Sous-sols", "Finition complète"]] },
-    autre:       { label: "Autre",               search: "commerce", emoji: "🏪", color: "#1c1f3d", name: "Votre Commerce",
-                   h1: "Votre commerce à {ville}", sub: "Vos services, vos heures, vos coordonnées. Tout au même endroit.",
-                   services: [["Services", "Ce que vous offrez"], ["Heures", "Quand nous joindre"], ["Contact", "En un clic"]] }
+    plombier: { label: "Plombier", color: "#1d4ed8", name: "Plomberie Dubois", font: "bricolage",
+      photo: "https://images.unsplash.com/photo-1676210134188-4c05dd172f89?w=900&q=70&auto=format&fit=crop",
+      h1: ["Une fuite? ", "On arrive."], sub: "Débouchage, chauffe-eau, salles de bain. Service rapide et honnête, 7 jours sur 7.", cta: "Demander une soumission",
+      services: [["Débouchage", "Intervention rapide"], ["Chauffe-eau", "Toutes marques"], ["Salle de bain", "Rénovation"]] },
+    coiffure: { label: "Salon de coiffure", color: "#be185d", name: "Salon Élégance", font: "serif",
+      photo: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=900&q=70&auto=format&fit=crop",
+      h1: ["Vos cheveux, ", "en mieux."], sub: "Coupe, couleur, coiffure d'événement. Prenez rendez-vous en ligne.", cta: "Prendre rendez-vous",
+      services: [["Coupe", "Femmes et hommes"], ["Couleur", "Mèches, balayage"], ["Événement", "Mariages"]] },
+    paysagiste: { label: "Paysagiste", color: "#15803d", name: "Paysagement Vert Nature", font: "fraunces",
+      photo: "https://images.unsplash.com/photo-1668120089662-42642838cfef?w=900&q=70&auto=format&fit=crop",
+      h1: ["Un terrain dont ", "vous serez fier."], sub: "Tonte, aménagement, pavé-uni et déneigement. Soumission gratuite sur place.", cta: "Soumission gratuite",
+      services: [["Pelouse", "Tonte, aération"], ["Aménagement", "Pavé-uni, haies"], ["Déneigement", "Résidentiel"]] },
+    restaurant: { label: "Restaurant", color: "#c2410c", name: "Resto Chez Lucie", font: "fraunces",
+      photo: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=900&q=70&auto=format&fit=crop",
+      h1: ["Fait maison, ", "servi chaud."], sub: "Menu du jour, commandes pour emporter et service de traiteur.", cta: "Voir le menu",
+      services: [["Menu du jour", "Fait maison"], ["Pour emporter", "Commandez d'avance"], ["Traiteur", "Groupes et fêtes"]] },
+    electricien: { label: "Électricien", color: "#ca8a04", name: "Électrique Tremblay", font: "condensed",
+      photo: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=900&q=70&auto=format&fit=crop",
+      h1: ["Le courant passe. ", "Partout."], sub: "Résidentiel et commercial. Maître électricien, travail garanti.", cta: "Demander une soumission",
+      services: [["Éclairage", "Intérieur, extérieur"], ["Panneaux", "Mise aux normes"], ["Bornes", "Recharge auto"]] },
+    mecanique: { label: "Garage / Mécanique", color: "#dc2626", name: "Garage Gagnon", font: "condensed",
+      photo: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=900&q=70&auto=format&fit=crop",
+      h1: ["Votre auto, ", "entre bonnes mains."], sub: "Entretien, freins, pneus, diagnostic. Estimation gratuite avant les travaux.", cta: "Prendre rendez-vous",
+      services: [["Pneus", "Pose, entreposage"], ["Freins", "Inspection"], ["Entretien", "Toutes marques"]] },
+    nettoyage: { label: "Entretien ménager", color: "#0891b2", name: "Nettoyage Éclat", font: "bricolage",
+      photo: "https://images.unsplash.com/photo-1758273238415-01ec03d9ef27?w=900&q=70&auto=format&fit=crop",
+      h1: ["Rentrez chez vous. ", "C'est propre."], sub: "Résidentiel et commercial, produits écologiques, équipe fiable.", cta: "Demander une soumission",
+      services: [["Résidentiel", "Hebdo ou mensuel"], ["Commercial", "Bureaux, commerces"], ["Grand ménage", "Printemps, automne"]] },
+    esthetique: { label: "Esthétique", color: "#9333ea", name: "Esthétique Belle-Peau", font: "serif",
+      photo: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=900&q=70&auto=format&fit=crop",
+      h1: ["Prenez du temps ", "pour vous."], sub: "Soins du visage, manucure, épilation. Réservez en ligne en quelques clics.", cta: "Réserver un soin",
+      services: [["Soins visage", "Sur mesure"], ["Manucure", "Gel, vernis"], ["Épilation", "Cire douce"]] },
+    renovation: { label: "Rénovation", color: "#b45309", name: "Rénovations Côté", font: "fraunces",
+      photo: "https://images.unsplash.com/photo-1595844730298-b960ff98fee0?w=900&q=70&auto=format&fit=crop",
+      h1: ["Rénover, ", "sans mauvaise surprise."], sub: "Cuisines, salles de bain, sous-sols. Licence RBQ, prix clair dès le départ.", cta: "Demander une soumission",
+      services: [["Cuisines", "Clé en main"], ["Salles de bain", "Douche, céramique"], ["Sous-sols", "Finition complète"]] },
+    autre: { label: "Autre", color: "#1c1f3d", name: "Votre Commerce", font: "bricolage",
+      photo: "https://images.unsplash.com/photo-1778142375628-73010ebde16a?w=900&q=70&auto=format&fit=crop",
+      h1: ["Tout votre commerce, ", "en une page."], sub: "Vos services, vos heures, vos coordonnées. Vos clients trouvent tout, tout de suite.", cta: "Nous joindre",
+      services: [["Services", "Ce que vous offrez"], ["Heures", "Quand nous joindre"], ["Contact", "En un clic"]] }
   };
   var COLORS = ["#1d4ed8", "#be185d", "#15803d", "#c2410c", "#ca8a04", "#0891b2", "#9333ea", "#1c1f3d"];
   var DEFAULT_CITY = "Saint-Hyacinthe";
@@ -112,29 +122,51 @@
       };
     }
 
+    function initials(n) {
+      var w = n.replace(/[^\p{L}\p{N} ]/gu, " ").split(/\s+/).filter(Boolean);
+      return ((w[0] || "V")[0] + (w[1] ? w[1][0] : "")).toUpperCase();
+    }
+
+    var lastPhoto = "";
     function update() {
       var v = currentValues();
       $("pvUrl").textContent = "webvoisin-sites.pages.dev/" + slug(v.name);
+      $("pvSite").className = "pv-site f-" + v.t.font;
+      $("pvSite").style.setProperty("--c", v.color);
       $("pvLogo").textContent = v.name;
-      $("pvLogo").style.color = v.color;
-      $("pvCall").style.background = v.color;
-      $("pvH1").textContent = v.t.h1.replace("{ville}", v.city);
+      $("pvMono").textContent = initials(v.name);
+      $("pvEyebrow").textContent = v.t.label + " · " + v.city;
+
+      var h1 = $("pvH1");
+      h1.textContent = "";
+      h1.appendChild(document.createTextNode(v.t.h1[0]));
+      var em = document.createElement("em");
+      em.textContent = v.t.h1[1];
+      h1.appendChild(em);
       $("pvSub").textContent = v.t.sub;
-      $("pvBtn").style.background = v.color;
-      $("pvHero").style.background = v.color + "14";
+      $("pvBtn").textContent = v.t.cta;
+
+      if (v.t.photo !== lastPhoto) {
+        lastPhoto = v.t.photo;
+        var ph = $("pvPhoto");
+        ph.classList.remove("on");
+        var img = new Image();
+        img.onload = function () { if (lastPhoto === v.t.photo) { ph.style.backgroundImage = 'url("' + v.t.photo + '")'; ph.classList.add("on"); } };
+        img.src = v.t.photo;
+      }
 
       var list = $("pvServices");
       list.textContent = "";
-      v.t.services.forEach(function (s) {
+      v.t.services.forEach(function (s, i) {
         var d = document.createElement("div");
         d.className = "pv-service";
-        d.style.borderLeftColor = v.color;
+        var n = document.createElement("small");
+        n.textContent = "0" + (i + 1);
         var t = document.createElement("b");
         t.textContent = s[0];
         var l = document.createElement("span");
         l.textContent = s[1];
-        d.appendChild(t);
-        d.appendChild(l);
+        d.appendChild(n); d.appendChild(t); d.appendChild(l);
         list.appendChild(d);
       });
 
@@ -142,13 +174,6 @@
         sw.classList.toggle("on", sw.dataset.color === v.color);
       });
 
-      // Le "après" du glisseur reprend le commerce tapé
-      document.querySelectorAll(".js-ba-name").forEach(function (el) { el.textContent = v.name; });
-      document.querySelectorAll(".js-ba-city").forEach(function (el) { el.textContent = v.t.h1.replace("{ville}", v.city); });
-      document.querySelectorAll(".js-ba-color").forEach(function (el) { el.style.background = v.color; });
-      document.querySelectorAll(".js-ba-search").forEach(function (el) { el.textContent = "🔍 " + v.t.search + " " + v.city.toLowerCase(); });
-
-      // L'aperçu "pulse" légèrement à chaque changement
       var pv = $("preview");
       pv.classList.remove("bump");
       void pv.offsetWidth;
@@ -184,8 +209,8 @@
         if (state.color) p.set("couleur", state.color.replace("#", ""));
         var link = window.location.origin + window.location.pathname + "?" + p.toString() + "#essai";
         var done = function () {
-          share.textContent = "✓ Lien copié!";
-          setTimeout(function () { share.textContent = "🔗 Copier le lien"; }, 2200);
+          share.textContent = "Lien copié";
+          setTimeout(function () { share.textContent = "Copier le lien"; }, 2200);
         };
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(link).then(done, function () { window.prompt("Copiez ce lien :", link); });
@@ -193,32 +218,6 @@
           window.prompt("Copiez ce lien :", link);
         }
       });
-    }
-  }
-
-  // ---------- Glisseur avant / après ----------
-  var ba = $("ba"), baRange = $("baRange");
-  if (ba && baRange) {
-    var setPos = function (v) { ba.style.setProperty("--pos", v + "%"); };
-    baRange.addEventListener("input", function () { setPos(baRange.value); });
-    setPos(baRange.value);
-
-    // Petit coup de pouce la première fois qu'il apparaît, pour montrer qu'on peut glisser
-    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      var nudged = false;
-      new IntersectionObserver(function (entries, obs) {
-        if (nudged || !entries[0].isIntersecting) return;
-        nudged = true;
-        obs.disconnect();
-        var frames = [50, 35, 25, 35, 50, 65, 72, 62, 50];
-        var k = 0;
-        var tick = setInterval(function () {
-          baRange.value = frames[k];
-          setPos(frames[k]);
-          k++;
-          if (k >= frames.length) clearInterval(tick);
-        }, 90);
-      }, { threshold: 0.5 }).observe(ba);
     }
   }
 
