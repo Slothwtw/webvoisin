@@ -70,6 +70,9 @@
           <label>Métier
             <select id="bTrade"></select>
           </label>
+          <label class="bf-other" id="bOtherWrap" hidden><span>Votre métier <em>(obligatoire)</em></span>
+            <input type="text" id="bOther" maxlength="40" placeholder="ex. Couvreur, fleuriste, toiletteur…" autocomplete="off">
+          </label>
           <label>Ville
             <input type="text" id="bCity" maxlength="30" placeholder="ex. Saint-Hyacinthe" autocomplete="off">
           </label>
@@ -80,6 +83,7 @@
         </div>
         <div class="preview" id="preview">
           <div class="pv-bar"><span></span><span></span><span></span><div class="pv-url" id="pvUrl">webvoisin-sites.pages.dev/votre-commerce</div></div>
+          <div class="pv-need">Écrivez votre métier plus haut pour voir votre aperçu.</div>
           <div class="pv-site" id="pvSite">
             <div class="pv-hero" id="pvHero">
               <div class="pv-photo" id="pvPhoto"></div>
