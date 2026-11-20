@@ -26,3 +26,10 @@
   [headers.values]
     Cross-Origin-Resource-Policy = "cross-origin"
     Cache-Control = "public, max-age=86400"
+
+# Liens courts d'aperçu pour les prospects (/a/nom-du-commerce)
+[[redirects]]
+  from = "/a/plomberie-vaudreuil"
+  to = "/?nom=Plomberie%20Vaudreuil&metier=plombier&ville=Pincourt#essai"
+  status = 302
+  force = true
