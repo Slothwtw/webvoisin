@@ -396,3 +396,9 @@ section.wrap::after{
   section.wrap::before{-webkit-mask-image:none;mask-image:none;opacity:.5}
 }
 @media (prefers-reduced-motion: reduce){ section.wrap::after{animation:none} }
+
+/* cases de services de l'aperçu : sans emoji, titre + détail + trait de couleur */
+.pv-service{text-align:left;padding:8px 9px;border-left:3px solid #4f46e5;gap:1px;background:#f6f6fa}
+.pv-service b{font-size:11px;font-weight:700;color:#111827}
+.pv-service span{font-size:9.5px;font-weight:500;color:#8a8f9c}
+.pv-service span:first-child{font-size:inherit}

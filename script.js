@@ -29,34 +29,34 @@
   var TRADES = {
     plombier:    { label: "Plombier",            search: "plombier", emoji: "🔧", color: "#1d4ed8", name: "Plomberie Dubois",
                    h1: "Votre plombier de confiance à {ville}", sub: "Urgences 24/7, chauffe-eau, débouchage. Service rapide et honnête.",
-                   services: [["🚿", "Débouchage"], ["🔥", "Chauffe-eau"], ["🛁", "Salle de bain"]] },
+                   services: [["Débouchage", "Intervention rapide"], ["Chauffe-eau", "Toutes marques"], ["Salle de bain", "Rénovation"]] },
     coiffure:    { label: "Salon de coiffure",   search: "salon de coiffure", emoji: "💇", color: "#be185d", name: "Salon Élégance",
                    h1: "Votre salon de coiffure à {ville}", sub: "Coupe, couleur, coiffure d'événement. Prenez rendez-vous en ligne.",
-                   services: [["✂️", "Coupe"], ["🎨", "Couleur"], ["💍", "Mariage"]] },
+                   services: [["Coupe", "Femmes et hommes"], ["Couleur", "Mèches, balayage"], ["Événement", "Mariages"]] },
     paysagiste:  { label: "Paysagiste",          search: "paysagiste", emoji: "🌳", color: "#15803d", name: "Paysagement Vert Nature",
                    h1: "Un terrain impeccable à {ville}", sub: "Tonte, aménagement, déneigement. Devis gratuit sur place.",
-                   services: [["🌿", "Pelouse"], ["🌸", "Jardins"], ["❄️", "Déneigement"]] },
+                   services: [["Pelouse", "Tonte, aération"], ["Jardins", "Pavé-uni, haies"], ["Déneigement", "Résidentiel"]] },
     restaurant:  { label: "Restaurant",          search: "restaurant", emoji: "🍽️", color: "#c2410c", name: "Resto Chez Lucie",
                    h1: "Bonne bouffe maison à {ville}", sub: "Menu du jour, pour emporter et traiteur. Venez nous voir!",
-                   services: [["🥘", "Menu du jour"], ["🥡", "Pour emporter"], ["🎉", "Traiteur"]] },
+                   services: [["Menu du jour", "Fait maison"], ["Pour emporter", "Commandez d'avance"], ["Traiteur", "Groupes et fêtes"]] },
     electricien: { label: "Électricien",         search: "électricien", emoji: "⚡", color: "#ca8a04", name: "Électrique Tremblay",
                    h1: "Votre électricien à {ville}", sub: "Résidentiel et commercial. Maître électricien certifié.",
-                   services: [["💡", "Éclairage"], ["🔌", "Panneaux"], ["🚗", "Bornes de recharge"]] },
+                   services: [["Éclairage", "Intérieur, extérieur"], ["Panneaux", "Mise aux normes"], ["Bornes", "Recharge auto"]] },
     mecanique:   { label: "Garage / Mécanique",  search: "garage mécanique", emoji: "🚗", color: "#475569", name: "Garage Gagnon",
                    h1: "Votre garage de confiance à {ville}", sub: "Entretien, freins, pneus. Estimation gratuite.",
-                   services: [["🛞", "Pneus"], ["🛑", "Freins"], ["🔩", "Entretien"]] },
+                   services: [["Pneus", "Pose, entreposage"], ["Freins", "Inspection"], ["Entretien", "Toutes marques"]] },
     nettoyage:   { label: "Entretien ménager",   search: "entretien ménager", emoji: "🧽", color: "#0891b2", name: "Nettoyage Éclat",
                    h1: "Une maison propre à {ville}, sans effort", sub: "Résidentiel et commercial. Produits écologiques.",
-                   services: [["🏠", "Résidentiel"], ["🏢", "Commercial"], ["✨", "Grand ménage"]] },
+                   services: [["Résidentiel", "Hebdo ou mensuel"], ["Commercial", "Bureaux, commerces"], ["Grand ménage", "Printemps, automne"]] },
     esthetique:  { label: "Esthétique",          search: "esthéticienne", emoji: "💅", color: "#9333ea", name: "Esthétique Belle-Peau",
                    h1: "Prenez soin de vous à {ville}", sub: "Soins du visage, manucure, épilation. Réservez en ligne.",
-                   services: [["🧖", "Soins visage"], ["💅", "Manucure"], ["🌸", "Épilation"]] },
+                   services: [["Soins visage", "Sur mesure"], ["Manucure", "Gel, vernis"], ["Épilation", "Cire douce"]] },
     renovation:  { label: "Rénovation",          search: "rénovation", emoji: "🔨", color: "#b45309", name: "Rénovations Côté",
                    h1: "Vos rénovations à {ville}, bien faites", sub: "Cuisines, salles de bain, sous-sols. Licence RBQ.",
-                   services: [["🍳", "Cuisines"], ["🛁", "Salles de bain"], ["🏚️", "Sous-sols"]] },
+                   services: [["Cuisines", "Clé en main"], ["Salles de bain", "Douche, céramique"], ["Sous-sols", "Finition complète"]] },
     autre:       { label: "Autre",               search: "commerce", emoji: "🏪", color: "#1c1f3d", name: "Votre Commerce",
                    h1: "Votre commerce à {ville}", sub: "Vos services, vos heures, vos coordonnées. Tout au même endroit.",
-                   services: [["⭐", "Services"], ["🕒", "Heures"], ["📍", "Nous joindre"]] }
+                   services: [["Services", "Ce que vous offrez"], ["Heures", "Quand nous joindre"], ["Contact", "En un clic"]] }
   };
   var COLORS = ["#1d4ed8", "#be185d", "#15803d", "#c2410c", "#ca8a04", "#0891b2", "#9333ea", "#1c1f3d"];
   var DEFAULT_CITY = "Saint-Hyacinthe";
@@ -71,7 +71,7 @@
     Object.keys(TRADES).forEach(function (key) {
       var opt = document.createElement("option");
       opt.value = key;
-      opt.textContent = TRADES[key].emoji + "  " + TRADES[key].label;
+      opt.textContent = TRADES[key].label;
       bTrade.appendChild(opt);
     });
 
@@ -115,7 +115,7 @@
     function update() {
       var v = currentValues();
       $("pvUrl").textContent = slug(v.name) + ".ca";
-      $("pvLogo").textContent = v.t.emoji + " " + v.name;
+      $("pvLogo").textContent = v.name;
       $("pvLogo").style.color = v.color;
       $("pvCall").style.background = v.color;
       $("pvH1").textContent = v.t.h1.replace("{ville}", v.city);
@@ -128,11 +128,12 @@
       v.t.services.forEach(function (s) {
         var d = document.createElement("div");
         d.className = "pv-service";
-        var i = document.createElement("span");
-        i.textContent = s[0];
+        d.style.borderLeftColor = v.color;
+        var t = document.createElement("b");
+        t.textContent = s[0];
         var l = document.createElement("span");
         l.textContent = s[1];
-        d.appendChild(i);
+        d.appendChild(t);
         d.appendChild(l);
         list.appendChild(d);
       });
@@ -142,7 +143,7 @@
       });
 
       // Le "après" du glisseur reprend le commerce tapé
-      document.querySelectorAll(".js-ba-name").forEach(function (el) { el.textContent = v.t.emoji + " " + v.name; });
+      document.querySelectorAll(".js-ba-name").forEach(function (el) { el.textContent = v.name; });
       document.querySelectorAll(".js-ba-city").forEach(function (el) { el.textContent = v.t.h1.replace("{ville}", v.city); });
       document.querySelectorAll(".js-ba-color").forEach(function (el) { el.style.background = v.color; });
       document.querySelectorAll(".js-ba-search").forEach(function (el) { el.textContent = "🔍 " + v.t.search + " " + v.city.toLowerCase(); });
