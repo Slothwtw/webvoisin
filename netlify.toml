@@ -19,3 +19,10 @@
   to = "/404"
   status = 404
   force = true
+
+# L'image d'aperçu doit être lisible par Discord, Facebook, etc.
+[[headers]]
+  for = "/og-image.png"
+  [headers.values]
+    Cross-Origin-Resource-Policy = "cross-origin"
+    Cache-Control = "public, max-age=86400"
