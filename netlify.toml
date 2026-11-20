@@ -25,6 +25,12 @@
   force = true
 
 [[redirects]]
+  from = "/cf/*"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
   from = "/netlify.toml"
   to = "/404"
   status = 404

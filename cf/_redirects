@@ -1,0 +1,3 @@
+/netlify.toml /404 404
+/cf/* /404 404
+/a/plomberie-vaudreuil /?nom=Plomberie%20Vaudreuil&metier=plombier&ville=Pincourt#essai 302
