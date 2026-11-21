@@ -256,7 +256,7 @@
     var lastPhoto = "";
     function update() {
       var v = currentValues();
-      $("pvUrl").textContent = "webvoisin-sites.pages.dev/" + slug(v.name);
+      $("pvUrl").textContent = "sitto-sites.pages.dev/" + slug(v.name);
       $("pvSite").className = "pv-site f-" + v.t.font;
       $("pvSite").style.setProperty("--c", v.color);
       $("pvLogo").textContent = v.name;

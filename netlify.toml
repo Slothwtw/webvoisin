@@ -1,4 +1,4 @@
-# Ne republie pas le site WebVoisin quand seuls les sites clients changent (ils sont sur Cloudflare Pages)
+# Ne republie pas le site Sitto quand seuls les sites clients changent (ils sont sur Cloudflare Pages)
 [build]
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)clients'"
 
