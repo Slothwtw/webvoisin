@@ -1,3 +1,13 @@
 /netlify.toml /404 404
 /cf/* /404 404
 /a/plomberie-vaudreuil /?nom=Plomberie%20Vaudreuil&metier=plombier&ville=Pincourt#essai 302
+/a/services-paysagers-mf /?nom=Services%20Paysagers%20MF&metier=paysagiste&ville=Saint-Pie#essai 302
+/a/royal-barber-shop /?nom=Royal%20Barber%20Shop&metier=coiffure&ville=Greenfield%20Park#essai 302
+/a/entreprises-mj /?nom=Les%20Entreprises%20MJ&metier=paysagiste&ville=Qu%C3%A9bec#essai 302
+/a/barbier-riviera /?nom=Salon%20Barbier%20Riviera&metier=coiffure&ville=Montr%C3%A9al#essai 302
+/a/sam-plomberie /?nom=Sam%20Plomberie&metier=plombier&ville=Brossard#essai 302
+/a/plombexpress /?nom=Plombexpress&metier=plombier&ville=Saint-Hubert#essai 302
+/a/sa-paysagement /?nom=SA%20Paysagement&metier=paysagiste&ville=Saint-Jean-sur-Richelieu#essai 302
+/a/paysager-desjardins /?nom=Entretien%20Paysager%20Desjardins&metier=paysagiste&ville=Montr%C3%A9al#essai 302
+/a/famous-cuts /?nom=Famous%20Cuts&metier=coiffure&ville=Saint-Hubert#essai 302
+/a/beaute-huguette /?nom=Beaut%C3%A9%20Huguette&metier=coiffure&ville=Longueuil#essai 302
